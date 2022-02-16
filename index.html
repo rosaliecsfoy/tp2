@@ -1,23 +1,112 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À la manière de</title>
+    <meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=l.0" /> <title>À la manière de - Jean-Charles Debroize</title> 
+<link rel="stylesheet" href="css/styles.css"> 
 </head>
 <body>
-    <header>
-
+    <div class="layout-page">
+    <header id="header" role="banner">
+        <nav class="nav nav--header" role="navigation">
+            <a class="logo" href="index.html">
+                <img src="images/logo-final.png" alt="Accueil (logo À la manière de)">
+            </a>
+        <ul class="nav__list nav__list--subList">
+            <li class="nav__listItem"><a href="artistes.html" class="nav__link--active">Artistes</a></li>
+            <li class="nav__listItem"><a href="blogue.html" class="nav__link">Blogue</a></li>
+            <li class="nav__listItem"><a href="ressources.html" class="nav__link">Ressources</a></li>
+            <li class="nav__listItem"><a href="a-propos.html" class="nav__link">À propos</a></li>
+        </ul>
+    </nav>
+        <picture>
+            <source media="(max-width:600px)" srcset="images/photo-montage_600.jpg"> 
+            <source media="(min-width:601px)" srcset="images/photo-montage_1000.jpg"> 
+            <img src="images/photo-montage_600.jpg" alt=" "> 
+        </picture>
     </header>
-    <main>
+    <main id="main" role="main">
+        <h1>Jean-Charles Debroize</h1>
+        <h2 class="sous-titre">Les photomanipulations originales de Jean-Charles Debroize</h2>
+        <p>Jean-Charles Debroize est directeur de création chez Kerozen à Rennes, en France. Découvert grâce à son projet de typographie « humaine » qui avait connu un grand succès en 2013, Jean-Charles Debroize excelle en photomanipulation en imaginant des créations saisissantes de réalisme. Ses travaux réalisés pour la suite Adobe Creative Cloud connaissent un succès retentissant. La poésie des images et leur qualité artistique sait mettre en valeur le potentiel créatif des produits Adobe, mais plus que tout, fait valoir l’immense talent de cet artiste!</p>
 
-    </main>
-    <aside>
+        <section>
+            <h2>Passionné d'illustration</h2>
+        <figure>
+            <img src="images/1-ballons_600.jpg" alt=" ">
+            <figcaption>Illustration de ballons sur le concept de l’élévation <br> © Debroize</figcaption>
+        </figure>
+        <p class="texteCourant">Passionné par le dessin depuis son plus jeune âge, Debroize intègre en 2003 une école d’arts appliqués à Rennes en France avec l’ambition de devenir illustrateur.
+            Au contact des élèves et des professeurs, il découvre la retouche numérique et commence à créer des œuvres superposant habilement photos et illustrations.</p>
+        </section>
+        
+        <section>
+        <h2>Expert en photomontage</h2>
+        <figure>
+            <img src="images/2-melodie_600.jpg" alt="">
+            <figcaption>Enfant pilotant un oiseau © Debroize, 2016</figcaption>
+            <p>Progressivement Debroize se perfectionne sur les logiciels de retouche d’images et développe un style bien à lui. Il rejoint le studio Kerozen en tant que Directeur Artistique. Cette petite agence Rennaise de 4 créatifs a toujours eu la volonté de créer des images surprenantes, drôles, poétiques ou terrifiantes pour lesquelles la maitrise du photomontage est primordiale.</p>
+        </figure>
+    </section>
 
+    <section>
+        <h2>Une inspiration pour les novices</h2>
+        <figure>
+            <img src="images/3-ours_600.jpg" alt="">
+            <figcaption>Jeune fille chevauchant un ours © Debroize, 2017</figcaption>
+            <p>Chaque année, Debroize inspire jeunes et moins jeunes à réaliser des photomontages des plus diversifiés. Son style parfois juvénile, parfois éditorialiste ou fantastique est une source d’inspiration inépuisable. Quelques-uns des travaux étudiants peuvent être retrouvés sur le site du programme Techniques d’intégration multimédia du <a href="https://timcsf.ca/">Cégep de Sainte-Foy</a>, collège francophone basé au Québec, Canada. </p>
+        </figure>
+    </section>
+
+    <section class="encadres__item">
+        <h2>Découvre-en plus sur cet artiste</h2>
+        <ul>
+            <li><a href="https://www.behance.net/jcdebroizea877">Behance</a></li>
+            <li><a href="http://designspartan.com/presentation/les-photomanipulations-originales-de-jean-charles­-debroize/">Design Spartan</a></li>
+            <li><a href="http://www.studio-kerozen.com/">Studio Kerozen</a></li>
+        </ul>
+    </section>
+
+    <aside class="encadres__item">
+        <h2 class="h2">Abonnez-vous à l'infolettre</h2>
+        <p>Une excellente manière de découvrir un artiste du domaine numérique, chaque semaine!</p>
+        <form action="index.html">
+            <label for="courriel">Inscrivez votre adresse courriel:</label>
+            <input id="courriel" name="courriel" type="email">
+            <button>M'abonner</button>
+        </form>
     </aside>
-    <footer>
+</main>
+<footer id="footer" role="contentinfo">
+    <nav class="nav nav--footer">
+        <ul class="nav__list">
+            <li class="nav__listItem"><a href="artistes.html" class="nav__link nav__link--active">Artistes</a></li>
+            <li class="nav__listItem"><a href="blogue.html" class="nav__link nav__link--active">Blogue</a></li>
+            <li class="nav__listItem"><a href="ressources.html" class="nav__link nav__link--active">Ressources</a></li>
+            <li class="nav__listItem"><a href="a-propos.html" class="nav__link nav__link--active">À propos</a></li>
+        </ul>
+    </nav>
+
+        <h2 class="h2">Sources des images</h2>
+        <ol class="listeSourcesImages">
+            <li>Illustration de ballons<br>
+                <a href="https://www.behance.net/gaUery/44848523/Adobe-Creative-Cloud"></a>
+            </li>
+            <li>Enfant pilotant un oiseau<br>
+                <a href="https://www.behance.net/gaUery/31608315/Mlodies-en-Courts"></a>
+            </li>
+            <li>Jeune fille chevauchant un ours<br>
+                <a href="https://www.behance.net/gaUery/44945511/Adobe-Creative-Cloud"></a>
+            </li>
+        </ol>
+
+        <p class=copyright>
+            <small>Tous droits réservés, © Projet en Design d'interface Il, 
+                <time>2019</time> 
+                </small> 
+        </p>
 
     </footer>
+</div> <!-- Fin du div.layout-page -->
 </body>
 </html>
