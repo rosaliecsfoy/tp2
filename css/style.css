@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /**
- * @author Prenom Nom <courriel>
+ * @author Rosalie Roy <2133488@csfoy.ca>
  *
  * TABLE DES MATIERES
  * Normalize
@@ -13,11 +13,314 @@
 
 /* Normalize
    ========================================================================== */
+   body {
+      background-image: url(../images/moroccan-flower.png);
+   }
+   .layout-page{
+      padding:2rem 2rem 0;
+      background-color: white;
+      }
+      @media(min-width:600px){
+      .layout-page{
+      max-width:1000px;
+      margin:auto;
+      }
+      }
+      .logo {
+         width: 100%;
+         display: flex;
+         justify-content: flex-start;
+         position: absolute;
+         width:30vw;
+         top:5vw;
+      }
+      .picture.banniere {
+         width: 100%;
+         align-content: center;
+      }
+      .nav__list--subList {
+         list-style: none;
+         display: flex;
+         justify-content: flex-end;
+         flex-direction: row;
+      }
+      .nav__listItem {
+         margin-left: 5px;
+         text-transform: uppercase;
+      }
+      nav {
+         font-family: "News Cycle";
+         font-weight: 300;
+      }
+      main {
+         display: block;
+      }
+      .introduction h1 {
+         margin-bottom: 0;
+      }
+      h1,
+      h2 {
+         line-height: 1;
+      }
+      img {
+         max-width: 100%;
+      }
+      figure {
+         margin: 0;
+      }
+      /* le conteneur flex */
+
+
+   @media (min-width: 600px) {
+      .descriptions{
+
+         display:flex; /* AJOUT indispensable */
+         
+         justify-content: space-between; /* AJOUT utile */
+         
+         align-content: flex-start; /* cette propriété n'est utile que s'il y plusieurs rangées ou colonnes */
+         
+         }
+         /* les items flex */
+   .descriptions section{
+   
+      flex: 1 0 30%; /* pour meilleur résultat, tu peux CHANGER le flex-basis à 30% plutôt que "auto" */
+      
+      width: 33%; /* pour tester peut-être? mieux vaut régler le flex-basis en % */
+      
+      margin: 1rem; /* AJOUT utile */
+      
+      }
+   }
+   figure {
+      margin: 0;
+   }
+   @media (min-width: 600px) {
+      .encadres {
+         display: flex;
+         justify-content: space-between;
+      }
+   }
+   .encadre {
+      background-color: #eeeeee;
+   }
+      @media (min-width: 600px) {
+         .encadre {
+            flex: 1 0 40%;
+            background-color: #eeeeee;
+            padding: 1rem;
+         }
+         .encadre:last-child {
+            margin-left: 2rem;
+         }
+
+      }
+      
+      .abonnement {
+         justify-content: center;
+      }
+
+      .nav__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding-right: 40px;
+      }
+      .nav__link--active:link,
+      .nav__link--active:visited {
+         background-color: white;
+         color: black;
+      }
+      .nav__link--active:hover,
+      .nav__link--active:active {
+         background-color: white;
+         color: red;
+      }
+      .nav__link:link,
+      .nav__link:visited {
+         color: black;
+      }
+      .nav__link:hover,
+      .nav__link:active {
+         color: red;
+      }
+      footer {
+         background-color: lightgray;
+         margin: 2rem 0 0;
+      }
+      .copyright {
+         text-align: center;
+         padding-bottom: 2rem;
+         margin-bottom: 0;
+      }
 
 /* Utilitaires
    ========================================================================== */
+   /*** Harmoniser le modèle de boîte avec Box-Sizing ***/
+html {
+   box-sizing: border-box;
+}
+
+*, 
+*::before, 
+*::after {
+   box-sizing: inherit;
+}
 
 /* Charte typographique
    ========================================================================== */
+   /* Roboto Condensed (Weight 300) */
+   @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+   /* Roboto Condensed (Weight 700) */
+   @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+   /* News Cycle (Weight 400) */
+   @import url('https://fonts.googleapis.com/css2?family=News+Cycle&display=swap');
+
+   /**
+ * Typographie responsive (Mobile First)
+   ========================================================================
+ * Les valeurs de taille de police suggérées ici sont à titre indicatif.
+ * À ajuster selon la direction visuelle et le choix de polices de caractères.
+ *
+ * Doc des points de rupture :
+ * ==========================================================================
+ * Écran étroit : de 0 à 600  
+ * point de rupture: 600px
+ *
+ * Écran moyen : de 601 à 800 
+ * point de rupture: 800px
+ *
+ * Écran large : 801 et +
+ */
+
+
+/* Charte typographique
+   ========================================================================== */
+/* Polices liées */
+/* copier ici l'instruction @import url('...'); proposé par Google Fonts */
+
+/* Base décimale */
+html{
+   font-size: 62.5%;
+}
+
+body {
+   /* Adapter la famille de polices selon le projet */
+   font-family: 'Roboto Condensed', sans-serif;
+   font-weight: 300;
+   font-size: 1.4rem;
+   /* facteur multiplicateur de la taille de la police 1.375x16 = 22 */
+   line-height: 1.375;
+}
+@media (min-width: 600px) {
+   body {
+       line-height: 1.5;
+       font-size: 1.6rem;
+   }
+}
+@media (min-width: 800px) {
+   body {
+       line-height: 1.75;
+       font-size: 1.6rem;
+   }
+}
+.introduction {
+   text-align: center;
+}
+@media (max-width: 600px) {
+   .introduction p {
+      text-align: justify;
+}
+
+h1,
+h2,
+h3,
+h4{
+   /* Adapter la famille de polices selon le projet */
+   font-family: 'Roboto Condensed', sans-serif;
+   font-weight: 700;
+}
+
+/* Hiérarchie responsive : plus proche = plus petit  &  plus loin = plus grand */
+h1 { /* = 32px */
+   font-size: 2.4rem;
+   text-transform: uppercase;
+   line-height: 0;
+   padding-top: 10px;
+}
+@media (min-width: 600px) {
+   h1 { 
+       font-size: 3.2rem;
+   }
+}
+@media (min-width: 800px) {
+   h1 { /* = 48px */
+       font-size: 3.6rem;
+   }
+}
+
+h2 { /* = 24px */
+   font-size: 1.8rem;
+   line-height: 1;
+}
+@media (min-width: 600px) {
+   h2 { /* = 32px */
+       font-size: 2.4rem;
+   }
+}
+@media (min-width: 800px) {
+   h2 { /* = 36px */
+       font-size: 3.0rem;
+   }
+}
+
+h3 { /* = 18px */
+   font-size: 1.6rem;
+}
+@media (min-width: 600px) {
+   h3 {  /* = 24px */
+       font-size: 1.8rem;
+   }
+}
+@media (min-width: 800px) {
+   h3 { /* = 30px */
+       font-size: 2.2rem;
+   }
+}
+
+h4 { /* = 16px */
+   font-size: 1.6rem;
+}
+@media (min-width: 600px) {
+   h4{ /* = 18px */
+       font-size: 1.8rem;
+   }
+}
+@media (min-width: 800px) {
+   h4 { /* = 22px */
+       font-size: 2.2rem;
+   }
+}
+figcaption {
+   font-family: 'Roboto Condensed', sans-serif;
+   font-weight: 300;
+   font-size: 1.2rem;
+}
+@media (min-width: 600px) {
+   figcaption{
+      font-size: 1.4rem;
+   }
+}
+.nav__list {
+   font-family: 'News Cycle';
+   font-weight: 300;
+}
+.nav__list--subList {
+   font-family: 'News Cycle';
+   font-weight: 300;
+}
+   
+
 
  

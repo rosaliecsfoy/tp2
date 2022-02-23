@@ -3,34 +3,41 @@
 <head>
     <meta charset="UTF-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=l.0" /> <title>À la manière de - Jean-Charles Debroize</title> 
-<link rel="stylesheet" href="css/styles.css"> 
+<link rel="stylesheet" href="css/style.css"> 
+<link rel="stylesheet" href="css/normalize.css"> 
 </head>
 <body>
     <div class="layout-page">
     <header id="header" role="banner">
-        <nav class="nav nav--header" role="navigation">
+        <!-- Rangée 1: Le logo et le menu principal -->
+        <!--<nav class="nav--header" role="navigation">
             <a class="logo" href="index.html">
                 <img src="images/logo-final.png" alt="Accueil (logo À la manière de)">
             </a>
-        <ul class="nav__list nav__list--subList">
+        <ul class="nav__list--subList">
             <li class="nav__listItem"><a href="artistes.html" class="nav__link--active">Artistes</a></li>
             <li class="nav__listItem"><a href="blogue.html" class="nav__link">Blogue</a></li>
             <li class="nav__listItem"><a href="ressources.html" class="nav__link">Ressources</a></li>
             <li class="nav__listItem"><a href="a-propos.html" class="nav__link">À propos</a></li>
         </ul>
-    </nav>
-        <picture>
+    </nav>  -->
+    <!-- Rangée 2: L'image du bandeau d'entête -->
+        <picture class="picture.banniere">
             <source media="(max-width:600px)" srcset="images/photo-montage_600.jpg"> 
             <source media="(min-width:601px)" srcset="images/photo-montage_1000.jpg"> 
             <img src="images/photo-montage_600.jpg" alt=" "> 
         </picture>
     </header>
     <main id="main" role="main">
+        <!-- Rangée 3: Le premier paragraphe occupe toute la largeur -->
+      <div class="introduction">
         <h1>Jean-Charles Debroize</h1>
         <h2 class="sous-titre">Les photomanipulations originales de Jean-Charles Debroize</h2>
         <p>Jean-Charles Debroize est directeur de création chez Kerozen à Rennes, en France. Découvert grâce à son projet de typographie « humaine » qui avait connu un grand succès en 2013, Jean-Charles Debroize excelle en photomanipulation en imaginant des créations saisissantes de réalisme. Ses travaux réalisés pour la suite Adobe Creative Cloud connaissent un succès retentissant. La poésie des images et leur qualité artistique sait mettre en valeur le potentiel créatif des produits Adobe, mais plus que tout, fait valoir l’immense talent de cet artiste!</p>
-
-        <section>
+      </div>
+        <!-- Rangée 4: les 3 descriptions avec images -->
+        <div class="descriptions">
+        <section class="description">
             <h2>Passionné d'illustration</h2>
         <figure>
             <img src="images/1-ballons_600.jpg" alt=" ">
@@ -40,7 +47,7 @@
             Au contact des élèves et des professeurs, il découvre la retouche numérique et commence à créer des œuvres superposant habilement photos et illustrations.</p>
         </section>
         
-        <section>
+        <section class="description">
         <h2>Expert en photomontage</h2>
         <figure>
             <img src="images/2-melodie_600.jpg" alt="">
@@ -49,7 +56,7 @@
         </figure>
     </section>
 
-    <section>
+    <section class="description">
         <h2>Une inspiration pour les novices</h2>
         <figure>
             <img src="images/3-ours_600.jpg" alt="">
@@ -57,8 +64,11 @@
             <p>Chaque année, Debroize inspire jeunes et moins jeunes à réaliser des photomontages des plus diversifiés. Son style parfois juvénile, parfois éditorialiste ou fantastique est une source d’inspiration inépuisable. Quelques-uns des travaux étudiants peuvent être retrouvés sur le site du programme Techniques d’intégration multimédia du <a href="https://timcsf.ca/">Cégep de Sainte-Foy</a>, collège francophone basé au Québec, Canada. </p>
         </figure>
     </section>
+</div>
 
-    <section class="encadres__item">
+    <!-- Rangée 5: les 2 encadrés -->
+    <div class="encadres">
+    <section class="encadre">
         <h2>Découvre-en plus sur cet artiste</h2>
         <ul>
             <li><a href="https://www.behance.net/jcdebroizea877">Behance</a></li>
@@ -67,46 +77,50 @@
         </ul>
     </section>
 
-    <aside class="encadres__item">
+    <aside class="encadre">
         <h2 class="h2">Abonnez-vous à l'infolettre</h2>
         <p>Une excellente manière de découvrir un artiste du domaine numérique, chaque semaine!</p>
         <form action="index.html">
             <label for="courriel">Inscrivez votre adresse courriel:</label>
             <input id="courriel" name="courriel" type="email">
-            <button>M'abonner</button>
+            <button class="abonnement">M'abonner</button>
         </form>
     </aside>
+</div>
 </main>
 <footer id="footer" role="contentinfo">
-    <nav class="nav nav--footer">
+    <!-- Rangée 6: variante du menu principal dans le pied de page -->
+    <!--<nav class="nav--footer">
         <ul class="nav__list">
-            <li class="nav__listItem"><a href="artistes.html" class="nav__link nav__link--active">Artistes</a></li>
-            <li class="nav__listItem"><a href="blogue.html" class="nav__link nav__link--active">Blogue</a></li>
-            <li class="nav__listItem"><a href="ressources.html" class="nav__link nav__link--active">Ressources</a></li>
-            <li class="nav__listItem"><a href="a-propos.html" class="nav__link nav__link--active">À propos</a></li>
+            <li class="nav__listItem"><a href="artistes.html" class="nav__link--active">Artistes</a></li>
+            <li class="nav__listItem"><a href="blogue.html" class="nav__link">Blogue</a></li>
+            <li class="nav__listItem"><a href="ressources.html" class="nav__link">Ressources</a></li>
+            <li class="nav__listItem"><a href="a-propos.html" class="nav__link">À propos</a></li>
         </ul>
-    </nav>
+    </nav>-->
 
+        <!-- Rangée 7: les crédits pour les images -->
         <h2 class="h2">Sources des images</h2>
         <ol class="listeSourcesImages">
             <li>Illustration de ballons<br>
-                <a href="https://www.behance.net/gaUery/44848523/Adobe-Creative-Cloud"></a>
+                <a href="https://www.behance.net/gaUery/44848523/Adobe-Creative-Cloud">https://www.behance.net/gaUery/44848523/Adobe-Creative-Cloud</a>
             </li>
             <li>Enfant pilotant un oiseau<br>
-                <a href="https://www.behance.net/gaUery/31608315/Mlodies-en-Courts"></a>
+                <a href="https://www.behance.net/gaUery/31608315/Mlodies-en-Courts">https://www.behance.net/gaUery/31608315/Mlodies-en-Courts</a>
             </li>
             <li>Jeune fille chevauchant un ours<br>
-                <a href="https://www.behance.net/gaUery/44945511/Adobe-Creative-Cloud"></a>
+                <a href="https://www.behance.net/gaUery/44945511/Adobe-Creative-Cloud">https://www.behance.net/gaUery/44945511/Adobe-Creative-Cloud</a>
             </li>
         </ol>
 
+        <!-- Rangée 8: copyright, mention légale-->
         <p class=copyright>
             <small>Tous droits réservés, © Projet en Design d'interface Il, 
                 <time>2019</time> 
                 </small> 
         </p>
 
-    </footer>
+    </footer>  
 </div> <!-- Fin du div.layout-page -->
 </body>
 </html>
