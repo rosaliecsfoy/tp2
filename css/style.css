@@ -26,14 +26,73 @@
       margin:auto;
       }
       }
-      .logo {
+      @media (min-width:600px) {
+         header {
+            min-height: 433px;
+            background-image: url(../images/photo-montage_1000.jpg);
+            background-position: 0 48px;
+            background-size: contain;
+            background-repeat: no-repeat;
+         }
+      }
+      @media (min-width:800px) {
+         header {
+            background-size: cover;
+         }
+      }
+      .nav {
+         font-family: 'News Cycle', sans-serif;
+      }
+      .nav--header {
+         flex-wrap: wrap;
+      }
+      @media (min-width:600px) {
+         .nav--header {
+            justify-content: space-between;
+            flex-wrap: nowrap;
+         }
+      }
+      .nav--header,
+      .nav__list {
          width: 100%;
          display: flex;
-         justify-content: flex-start;
-         position: absolute;
-         width:30vw;
-         top:5vw;
       }
+      @media (min-width:600px) {
+         .nav--header,
+         .nav__list {
+         width: auto;
+      }
+      }
+      .nav__list {
+         margin: 0;
+         padding: 0;
+         list-style: none;
+         justify-content: space-between;
+      }
+      .logo {
+         flex-grow: 1;
+         text-align: center;
+         transition: all 0.5s;
+      }
+      @media (min-width:600px) {
+         .logo {
+            max-width: 250px;
+         }
+      }
+      @media (min-width:800px) {
+         .logo {
+            max-width: 300px;
+         }
+      }
+      a {
+         background-color: transparent;
+      }
+      @media (min-width:600px) {
+         header picture {
+            display: none;
+         }
+      }
+      
       .picture.banniere {
          width: 100%;
          align-content: center;
@@ -45,7 +104,6 @@
          flex-direction: row;
       }
       .nav__listItem {
-         margin-left: 5px;
          text-transform: uppercase;
       }
       nav {
@@ -101,9 +159,6 @@
          justify-content: space-between;
       }
    }
-   .encadre {
-      background-color: #eeeeee;
-   }
       @media (min-width: 600px) {
          .encadre {
             flex: 1 0 40%;
@@ -125,11 +180,11 @@
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        padding-right: 40px;
+        margin: 0;
+        padding: 0;
       }
       .nav__link--active:link,
       .nav__link--active:visited {
-         background-color: white;
          color: black;
       }
       .nav__link--active:hover,
@@ -137,17 +192,55 @@
          background-color: white;
          color: red;
       }
+      .nav__link--active {
+         display: inline-block;
+         padding: 0.25rem;
+         text-decoration: none;
+      }
       .nav__link:link,
       .nav__link:visited {
          color: black;
+         text-decoration: none;
       }
       .nav__link:hover,
       .nav__link:active {
-         color: red;
+         color: orangered;
+      }
+      .nav__link {
+         display: inline-block;
+         padding: 1rem;
+         text-decoration: none;
+      }
+      .nav__link--active {
+         padding: 1rem;
+         background-color: #dbe8ec;
+      }
+      @media (min-width: 600px) {
+         .nav__link {
+            display: inline-block;
+            padding: 1rem;
+            text-decoration: none;
+         }
       }
       footer {
          background-color: lightgray;
          margin: 2rem 0 0;
+      }
+      .nav--footer {
+         background-color: black;
+      }
+      .nav--footer .nav__link--active:link,
+      .nav--footer .nav__link--active:visited {
+         color: orangered;
+         background-color: #dbe8ec;
+      }
+      .nav--footer .nav__link:link,
+      .nav--footer .nav__link:visited {
+         color: white;
+      }
+      .nav--footer .nav__link:hover,
+      .nav--footer .nav__link:active {
+         color: orangered;
       }
       .copyright {
          text-align: center;
@@ -231,6 +324,7 @@ body {
 @media (max-width: 600px) {
    .introduction p {
       text-align: justify;
+   }
 }
 
 h1,
@@ -246,7 +340,7 @@ h4{
 h1 { /* = 32px */
    font-size: 2.4rem;
    text-transform: uppercase;
-   line-height: 0;
+   line-height: 1;
    padding-top: 10px;
 }
 @media (min-width: 600px) {
@@ -307,17 +401,17 @@ figcaption {
    font-weight: 300;
    font-size: 1.2rem;
 }
-@media (min-width: 600px) {
-   figcaption{
+@media (min-width:600px){
+   figcaption {
       font-size: 1.4rem;
    }
 }
 .nav__list {
-   font-family: 'News Cycle';
+   font-family: 'News Cycle', sans-serif;
    font-weight: 300;
 }
 .nav__list--subList {
-   font-family: 'News Cycle';
+   font-family: 'News Cycle', sans-serif;
    font-weight: 300;
 }
    
