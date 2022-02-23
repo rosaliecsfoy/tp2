@@ -183,10 +183,6 @@
         margin: 0;
         padding: 0;
       }
-      .nav__link--active:link,
-      .nav__link--active:visited {
-         color: black;
-      }
       .nav__link--active:hover,
       .nav__link--active:active {
          background-color: white;
@@ -199,7 +195,6 @@
       }
       .nav__link:link,
       .nav__link:visited {
-         color: black;
          text-decoration: none;
       }
       .nav__link:hover,
@@ -211,7 +206,13 @@
          padding: 1rem;
          text-decoration: none;
       }
-      .nav__link--active {
+      .nav__link--active:link,
+      .nav__link--active:visited {
+         padding: 1rem;
+         background-color: #dbe8ec;
+      }
+      .nav__link--active:hover,
+      .nav__link--active:active {
          padding: 1rem;
          background-color: #dbe8ec;
       }
@@ -225,6 +226,7 @@
       footer {
          background-color: lightgray;
          margin: 2rem 0 0;
+         padding: 0;
       }
       .nav--footer {
          background-color: black;
@@ -357,6 +359,9 @@ h1 { /* = 32px */
 h2 { /* = 24px */
    font-size: 1.8rem;
    line-height: 1;
+}
+.sous-titre {
+   margin-top: 0;
 }
 @media (min-width: 600px) {
    h2 { /* = 32px */
