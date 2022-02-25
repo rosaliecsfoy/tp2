@@ -263,14 +263,9 @@ html {
    box-sizing: inherit;
 }
 
+
 /* Charte typographique
    ========================================================================== */
-   /* Roboto Condensed (Weight 300) */
-   @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
-   /* Roboto Condensed (Weight 700) */
-   @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
-   /* News Cycle (Weight 400) */
-   @import url('https://fonts.googleapis.com/css2?family=News+Cycle&display=swap');
 
    /**
  * Typographie responsive (Mobile First)
@@ -294,7 +289,12 @@ html {
    ========================================================================== */
 /* Polices liées */
 /* copier ici l'instruction @import url('...'); proposé par Google Fonts */
-
+   /* Roboto Condensed (Weight 300) */
+   @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+   /* Roboto Condensed (Weight 700) */
+   @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+   /* News Cycle (Weight 400) */
+   @import url('https://fonts.googleapis.com/css2?family=News+Cycle&display=swap');
 /* Base décimale */
 html{
    font-size: 62.5%;
